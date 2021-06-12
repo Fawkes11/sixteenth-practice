@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+$lightgray: hsl(210, 46%, 95%);
+$moderateviolet: hsl(263, 55%, 52%);
+$verydarkgrayishblue: hsl(217, 19%, 35%);
+$verydarkblackishblue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$lightgrayishblue: hsl(210, 46%, 95%);
+$verified: hsla(210, 46%, 95%,0.7);
+$verifiedb: hsla(217, 19%, 35%,0.7);
+$quotations: hsla(210, 46%, 95%,0.5);
+$quotationsb: hsla(217, 19%, 35%,0.5);
+$font-family: Barlow Semi Condensed, sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: $font-family;
+}
+
+.container{
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 5;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.item{
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.first{
+    
+    grid-area: 1/1/2/2;
+    position: relative;
+    background-color: $moderateviolet;
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 0;
+}
+.second{
+    background-color: $verydarkgrayishblue;
+    grid-area: 2/1/3/2;
+}
+.third{
+    background-color: $white;
+    grid-area: 3/1/4/2;
+}
+.fourth{
+    background-color: $verydarkblackishblue;
+    grid-area: 4/1/5/2; 
+}
+.fifth{
+    background-color: $white;
+    grid-area: 5/1/6/2;
+}
+.perfil{
+    display: flex;
+    align-items: center;
+}
+.perfil__basic{
+    padding-left: 10px;
+}
+.img__perfil{
+    img{
+        width: 35px;
+        border-radius: 50%;
+    }
+}
+.perfil__name{
+    color: $lightgrayishblue;
+    font-size: 13px;
+}
+.perfil__career{
+    color: $verified;
+    font-size: 11px;
+}
+.perfil__info{
+    margin-top: 15px;
+    font-size: 19px;
+    color: $white;
+    font-weight: 600;
+}
+.perfil__infob{
+    margin-top: 15px;
+    color: $quotations;
+    font-size: 13px;
+    line-height: 19px;
+}
+.jeanette__name, .kira__name, .jeanette__info , .kira__info{
+    color: $verydarkgrayishblue;
+}
+.jeanette__career, .kira__career{
+    color: $verifiedb;
+}
+.jeanette__infob , .kira__infob{
+    color: $quotationsb;
+}
+
+@media (min-width: 600px){
+    .container{
+        width: 510px;
+    }
+}
+
+
+
+@media (min-width: 1200px){
+
+    body{
+        height: 100vh;
+    }
+
+    .container{
+        width: 80%;
+        height: 65%;
+        grid-template-columns: 5;
+        grid-template-rows: 2;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .first{
+        grid-area: 1/1/2/4;
+        background-position: 80% 0;
+    }
+    .second{
+        grid-area: 1/4/2/5;
+    }
+    .third{
+        grid-area: 2/1/3/2;
+    }
+    .fourth{
+        grid-area: 2/2/3/5;
+    }
+    .fifth{
+        grid-area: 1/5/3/6;
+    }
+}
+
+
+@media (min-width: 1441px){
+
+    .container{
+        width: 1152px;
+        height: 585px;
+    }
+}
+
+
